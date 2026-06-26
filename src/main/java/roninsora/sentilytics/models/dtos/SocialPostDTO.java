@@ -28,7 +28,7 @@ public class SocialPostDTO {
     private LocalDateTime analyzedAt;
 
     /*
-    * Right now, my project is only outgoing
+    * Right now,this part is outgoing
     * for this case we do not need validation rules
     * here, because data is coming out from my db not
     * going in. If it was incoming i definitely needed the
