@@ -87,7 +87,6 @@ public class SentimentController {
     }
 
 
-
     //Manually analyze custom text.
     //Body: { "text": "I love this product!"}
     @PostMapping("/analyze")
