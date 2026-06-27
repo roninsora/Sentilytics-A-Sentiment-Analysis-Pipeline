@@ -14,14 +14,21 @@ def analyze_sentiment(request: TextRequest):
     if not request.text or not request.text.strip():
         return {"sentiment": "NEUTRAL", "score": 0.0}
 
-    # Run sentiment analysis
-    # Expected output from pipeline: [{'label': 'POSITIVE', 'score': 0.9998}]
+
     result = sentiment_pipeline(request.text)[0]
 
-    label = result['label'].upper()
+    raw_label = result['label'].upper()
+    
+    if raw_label in ['LABEL_0', 'NEG', 'NEGATIVE']:
+        label = 'NEGATIVE'
+    elif raw_label in ['LABEL_1', 'POS', 'POSITIVE']:
+        label = 'POSITIVE'
+    else:
+        label = raw_label
+
     score = round(result['score'], 3)
 
-    # Transformers typically returns POSITIVE or NEGATIVE
+
     return {
         "sentiment": label,
         "score": score

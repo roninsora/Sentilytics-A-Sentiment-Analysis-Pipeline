@@ -14,6 +14,7 @@ public class Stats {
     private long positiveCount;
     private long negativeCount;
     private long neutralCount;
+    private double average;
 
     private double positivePercentage;
     private double negativePercentage;

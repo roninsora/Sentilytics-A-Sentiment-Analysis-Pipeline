@@ -43,6 +43,9 @@ public class SocialPost {
     @Column(nullable = false)
     private String sentiment;
 
+    @Column(nullable = false)
+    private double score;
+
     private String keyword;
 
     private LocalDateTime createdAt;

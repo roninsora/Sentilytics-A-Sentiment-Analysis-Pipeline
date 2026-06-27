@@ -1,10 +1,12 @@
 package roninsora.sentilytics.mapper.impl;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 import roninsora.sentilytics.mapper.Mapper;
 import roninsora.sentilytics.models.dtos.AnalyzePostDTO;
 import roninsora.sentilytics.models.entities.AnalyzePost;
 
+@Component
 public class AnalyzePostMapperImpl implements Mapper<AnalyzePost, AnalyzePostDTO> {
 
     private final ModelMapper modelMapper;

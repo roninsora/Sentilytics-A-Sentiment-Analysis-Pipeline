@@ -23,6 +23,7 @@ public class SocialPostDTO {
     private String author;
     private String content;
     private String sentiment;
+    private double score;
     private String keyword;
     private LocalDateTime createdAt;
     private LocalDateTime analyzedAt;

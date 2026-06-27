@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class Dashboard {
 
-    private String time;
+    private String date;
     private long positiveCount;
     private long negativeCount;
     private long neutralCount;

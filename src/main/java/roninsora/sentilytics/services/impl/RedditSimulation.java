@@ -95,7 +95,6 @@ public class RedditSimulation implements SocialMediaClient {
     }
 
     private String generatePost(String keyword) {
-        // Weighted: 35% positive, 35% negative, 30% neutral
         int roll = random.nextInt(100);
         String[] templates;
         if (roll < 35) {
