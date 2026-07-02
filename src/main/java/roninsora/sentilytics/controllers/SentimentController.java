@@ -109,7 +109,7 @@ public class SentimentController {
         return ResponseEntity.ok(Map.of(
                 "keyword", keyword,
                 "newPosts", count,
-                "messge", "Complete"
+                "message", "Complete"
         ));
     }
 }
